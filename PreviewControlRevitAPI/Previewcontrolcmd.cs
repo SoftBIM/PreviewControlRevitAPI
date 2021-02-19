@@ -23,7 +23,13 @@ namespace PreviewControlRevitAPI
             collecotr.OfClass(typeof(Autodesk.Revit.DB.View));
 
             FrmPreviewWindows win = new FrmPreviewWindows();
-            win.grid1.Children.Add(new PreviewControl(doc, doc.ActiveView.Id));
+            PreviewControl previewControl = new PreviewControl(doc, doc.ActiveView.Id);
+            previewControl.Loaded += (sender, args) =>
+            {
+                previewControl.UIView.ZoomToFit();
+            };
+            win.grid1.Children.Add(previewControl);
+            
             win.ShowDialog();
             return Result.Succeeded;
         }
