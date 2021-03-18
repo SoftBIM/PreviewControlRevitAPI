@@ -20,7 +20,7 @@ namespace PreviewControlRevitAPI
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
             FilteredElementCollector collecotr = new FilteredElementCollector(doc);
-            collecotr.OfClass(typeof(Autodesk.Revit.DB.View));
+            collecotr.OfClass(typeof(View));
 
             FrmPreviewWindows win = new FrmPreviewWindows();
             PreviewControl previewControl = new PreviewControl(doc, doc.ActiveView.Id);

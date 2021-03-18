@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:PreviewControlRevitAPI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Preview Control"
-    d:DesignHeight="500"
-    d:DesignWidth="500"
+    Height="500"
+    Width="500"
     ResizeMode="NoResize"
     mc:Ignorable="d">
     <Grid>
