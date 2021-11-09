@@ -11,8 +11,16 @@
     ResizeMode="NoResize"
     mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="cbbLevel"
+                  DisplayMemberPath="Name"
+                  />
         <Grid
-            Name="grid1"
+            Name="GridControl"
+            Grid.Row="1"
             HorizontalAlignment="Left"
             VerticalAlignment="Top" />
     </Grid>
